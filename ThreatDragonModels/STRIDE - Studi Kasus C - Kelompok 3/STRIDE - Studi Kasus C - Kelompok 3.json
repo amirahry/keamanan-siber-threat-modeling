@@ -31,29 +31,32 @@
         "cells": [
           {
             "position": {
-              "x": 42.500000000000114,
-              "y": 60.00000000000068
+              "x": 31.25,
+              "y": 65.00000000000068
             },
             "size": {
-              "width": 250,
-              "height": 480
+              "width": 270,
+              "height": 500
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "TB 1 - Area Publik"
               }
             },
             "visible": true,
             "shape": "trust-boundary-box",
+            "id": "559458ea-5dd8-48e2-b923-278bb15a5961",
             "zIndex": -1,
-            "id": "5a393dd3-92a6-4e8f-ade5-ffbf2a895544",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "TB 1 - Area Publik",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [],
+              "crossingFlows": [
+                "bcba797d-835f-471e-8329-2ac6d2bc142f",
+                "b75a7616-7581-4e90-81e2-258032678d90"
+              ],
               "containedElements": [
                 "6698cc28-bc80-4ef5-aa06-53d1b54ff989",
                 "e9417515-8949-49dd-a87f-28719888b7a3",
@@ -63,34 +66,73 @@
           },
           {
             "position": {
-              "x": 324.5000000000001,
-              "y": 60.00000000000068
+              "x": 640,
+              "y": 65.00000000000068
             },
             "size": {
-              "width": 250,
-              "height": 480
+              "width": 440,
+              "height": 500
             },
             "attrs": {
               "label": {
-                "text": "Trust Boundary"
+                "text": "TB 2 - Perangkat Tugas"
               }
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "zIndex": -1,
-            "id": "e8431bd7-34d9-4f89-9c31-603a7c49c4f5",
+            "id": "9d2ad3a3-d02d-4214-a561-5826771f911d",
             "data": {
               "type": "tm.BoundaryBox",
-              "name": "Trust Boundary",
+              "name": "TB 2 - Perangkat Tugas",
               "description": "",
               "isTrustBoundary": true,
               "hasOpenThreats": false,
-              "crossingFlows": [],
+              "crossingFlows": [
+                "b2fa7ea5-945e-4eb7-9e6b-5f3cc397b517",
+                "49314f37-5fa2-401d-b612-9bb255e28bff"
+              ],
+              "containedElements": [
+                "ea8ec5df-3c70-4236-81d9-4f455a9479a3",
+                "94d4e478-c52b-420b-ab90-4081afaf0140"
+              ]
+            },
+            "zIndex": -1
+          },
+          {
+            "position": {
+              "x": 335.25,
+              "y": 65.00000000000068
+            },
+            "size": {
+              "width": 270,
+              "height": 500
+            },
+            "attrs": {
+              "label": {
+                "text": "TB 3 - Layanan Internal"
+              }
+            },
+            "visible": true,
+            "shape": "trust-boundary-box",
+            "id": "7ba8ab0f-abc4-465a-b709-06124ea9edfe",
+            "data": {
+              "type": "tm.BoundaryBox",
+              "name": "TB 3 - Layanan Internal",
+              "description": "",
+              "isTrustBoundary": true,
+              "hasOpenThreats": false,
+              "crossingFlows": [
+                "bcba797d-835f-471e-8329-2ac6d2bc142f",
+                "b2fa7ea5-945e-4eb7-9e6b-5f3cc397b517",
+                "49314f37-5fa2-401d-b612-9bb255e28bff",
+                "b75a7616-7581-4e90-81e2-258032678d90"
+              ],
               "containedElements": [
                 "af0ca9ec-5dfd-4c2b-906a-1948505114de",
                 "47e2afa9-a8d9-40e6-9993-a1b4e1283604"
               ]
-            }
+            },
+            "zIndex": -1
           },
           {
             "position": {
@@ -455,130 +497,7 @@
           },
           {
             "position": {
-              "x": 600,
-              "y": 260.0000000000007
-            },
-            "size": {
-              "width": 220,
-              "height": 110
-            },
-            "attrs": {
-              "text": {
-                "text": "Aplikasi \nPemindai"
-              },
-              "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
-                "strokeDasharray": null
-              }
-            },
-            "visible": true,
-            "shape": "process",
-            "zIndex": 6,
-            "ports": {
-              "groups": {
-                "top": {
-                  "position": "top",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "right": {
-                  "position": "right",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "bottom": {
-                  "position": "bottom",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                },
-                "left": {
-                  "position": "left",
-                  "attrs": {
-                    "circle": {
-                      "r": 4,
-                      "magnet": true,
-                      "stroke": "#5F95FF",
-                      "strokeWidth": 1,
-                      "fill": "#fff",
-                      "style": {
-                        "visibility": "hidden"
-                      }
-                    }
-                  }
-                }
-              },
-              "items": [
-                {
-                  "group": "top",
-                  "id": "eb92cbf6-c083-4663-bc3c-4f5b1a02ce15"
-                },
-                {
-                  "group": "right",
-                  "id": "ac830cf9-e8c9-4d84-8141-20e807418910"
-                },
-                {
-                  "group": "bottom",
-                  "id": "a9d0a8ea-078a-47ca-8eed-3e33f8266edd"
-                },
-                {
-                  "group": "left",
-                  "id": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
-                }
-              ]
-            },
-            "id": "18a161de-d1d6-45d3-9c6b-84729c7af375",
-            "data": {
-              "type": "tm.Process",
-              "name": "Aplikasi \nPemindai",
-              "description": "Memindai QR Code, mengirim permintaan validasi, dan menampilkan hasil pemeriksaan tiket.",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "handlesCardPayment": false,
-              "handlesGoodsOrServices": false,
-              "isWebApplication": false,
-              "privilegeLevel": "",
-              "threats": []
-            },
-            "children": [
-              "350b0d13-0ff7-42b7-a9f0-4a97d3a28230"
-            ]
-          },
-          {
-            "position": {
-              "x": 870,
+              "x": 930,
               "y": 285.0000000000007
             },
             "size": {
@@ -691,7 +610,8 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            }
+            },
+            "children": []
           },
           {
             "position": {
@@ -816,7 +736,7 @@
           {
             "position": {
               "x": 111.25,
-              "y": 442
+              "y": 460
             },
             "size": {
               "width": 112.5,
@@ -964,7 +884,7 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Permintaan Rek"
+              "Permintaan \nRekap"
             ],
             "id": "0bce3989-f531-4431-a1bc-cfe80751274b",
             "source": {
@@ -1007,7 +927,7 @@
             "data": {
               "type": "tm.Flow",
               "name": "Registrasi",
-              "description": "",
+              "description": "\tPeserta mengirim data pendaftaran.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1033,7 +953,7 @@
             },
             "vertices": [
               {
-                "x": 190,
+                "x": 200,
                 "y": 210
               }
             ]
@@ -1058,7 +978,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Tiket \nQR",
+              "name": "Data \nKehadiran",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1072,21 +992,21 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Tiket \nQR"
+              "Data \nKehadiran"
             ],
-            "id": "acc7dac9-2e9c-42e8-8974-5572af0718dc",
+            "id": "3a998359-c735-4375-a89e-202db4272000",
             "source": {
-              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
-              "port": "eb92cbf6-c083-4663-bc3c-4f5b1a02ce15"
+              "cell": "584eb72e-228e-4526-a6d5-b3295f6a1005",
+              "port": "f3b1d84b-e4a7-4d7b-abc8-fbca53b63bda"
             },
             "target": {
-              "cell": "6698cc28-bc80-4ef5-aa06-53d1b54ff989",
-              "port": "e02dc955-683b-4c66-85e1-77880c38910e"
+              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
+              "port": "a9d0a8ea-078a-47ca-8eed-3e33f8266edd"
             },
             "vertices": [
               {
                 "x": 130,
-                "y": 220
+                "y": 410
               }
             ]
           },
@@ -1110,8 +1030,8 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Simpan dan\nUpdate Tiket",
-              "description": "",
+              "name": "Tiket\nQR\n",
+              "description": "Portal menampilkan tiket QR Code.",
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
@@ -1124,21 +1044,21 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Simpan dan\nUpdate Tiket"
+              "Tiket\nQR\n"
             ],
-            "id": "c23874d4-3fab-44cd-bbef-4c1cea5f6edb",
+            "id": "bbc0ac47-1bc2-46d5-947a-e3ae9572b71e",
             "source": {
-              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
-              "port": "a9d0a8ea-078a-47ca-8eed-3e33f8266edd"
+              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
+              "port": "eb92cbf6-c083-4663-bc3c-4f5b1a02ce15"
             },
             "target": {
-              "cell": "47e2afa9-a8d9-40e6-9993-a1b4e1283604",
-              "port": "e2f5b157-7d4f-4da9-89ae-42cff9b2f0cf"
+              "cell": "6698cc28-bc80-4ef5-aa06-53d1b54ff989",
+              "port": "e02dc955-683b-4c66-85e1-77880c38910e"
             },
             "vertices": [
               {
-                "x": 410,
-                "y": 420
+                "x": 130,
+                "y": 220
               }
             ]
           },
@@ -1214,7 +1134,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data \nKehadiran",
+              "name": "Simpan dan\nUpdate Tiket",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1228,23 +1148,479 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data \nKehadiran"
+              "Simpan dan\nUpdate Tiket"
             ],
-            "id": "3a998359-c735-4375-a89e-202db4272000",
+            "id": "c23874d4-3fab-44cd-bbef-4c1cea5f6edb",
             "source": {
-              "cell": "584eb72e-228e-4526-a6d5-b3295f6a1005",
-              "port": "f3b1d84b-e4a7-4d7b-abc8-fbca53b63bda"
+              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
+              "port": "a9d0a8ea-078a-47ca-8eed-3e33f8266edd"
             },
             "target": {
-              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
-              "port": "a9d0a8ea-078a-47ca-8eed-3e33f8266edd"
+              "cell": "47e2afa9-a8d9-40e6-9993-a1b4e1283604",
+              "port": "e2f5b157-7d4f-4da9-89ae-42cff9b2f0cf"
             },
             "vertices": [
               {
-                "x": 130,
-                "y": 410
+                "x": 410,
+                "y": 420
               }
             ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Tiket dan\n Rekap\n",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "559458ea-5dd8-48e2-b923-278bb15a5961",
+                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
+              ]
+            },
+            "labels": [
+              "Tiket dan\n Rekap\n"
+            ],
+            "id": "bcba797d-835f-471e-8329-2ac6d2bc142f",
+            "source": {
+              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
+              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
+            },
+            "target": {
+              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Permintaan\nValidasi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "9d2ad3a3-d02d-4214-a561-5826771f911d",
+                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
+              ]
+            },
+            "labels": [
+              "Permintaan\nValidasi"
+            ],
+            "id": "b2fa7ea5-945e-4eb7-9e6b-5f3cc397b517",
+            "source": {
+              "cell": "94d4e478-c52b-420b-ab90-4081afaf0140",
+              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
+            },
+            "target": {
+              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "vertices": [
+              {
+                "x": 590,
+                "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Hasil\nValidasi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "9d2ad3a3-d02d-4214-a561-5826771f911d",
+                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
+              ]
+            },
+            "labels": [
+              "Hasil\nValidasi"
+            ],
+            "id": "49314f37-5fa2-401d-b612-9bb255e28bff",
+            "source": {
+              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "target": {
+              "cell": "94d4e478-c52b-420b-ab90-4081afaf0140",
+              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
+            },
+            "vertices": [
+              {
+                "x": 580,
+                "y": 340
+              },
+              {
+                "x": 600,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Permintaan\nRegistrasi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "559458ea-5dd8-48e2-b923-278bb15a5961",
+                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
+              ]
+            },
+            "labels": [
+              "Permintaan\nRegistrasi"
+            ],
+            "id": "b75a7616-7581-4e90-81e2-258032678d90",
+            "source": {
+              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "target": {
+              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
+              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
+            },
+            "vertices": [
+              {
+                "x": 310,
+                "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Login dan\nPindai",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Login dan\nPindai"
+            ],
+            "id": "f2ca8da8-5b7f-4956-ba02-c81bf8e9dcdd",
+            "source": {
+              "cell": "ea8ec5df-3c70-4236-81d9-4f455a9479a3",
+              "port": "63be7fa0-a54f-4ea2-9c57-6fa93edaf2fc"
+            },
+            "target": {
+              "cell": "94d4e478-c52b-420b-ab90-4081afaf0140",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "vertices": [
+              {
+                "x": 890,
+                "y": 290
+              },
+              {
+                "x": 830,
+                "y": 290
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Status\nValidasi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Status\nValidasi"
+            ],
+            "id": "c51681ed-e38b-4ea3-8d5b-90bb0818e279",
+            "source": {
+              "cell": "94d4e478-c52b-420b-ab90-4081afaf0140",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "target": {
+              "cell": "ea8ec5df-3c70-4236-81d9-4f455a9479a3",
+              "port": "63be7fa0-a54f-4ea2-9c57-6fa93edaf2fc"
+            },
+            "vertices": [
+              {
+                "x": 840,
+                "y": 340
+              },
+              {
+                "x": 880,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "position": {
+              "x": 666.5000000000001,
+              "y": 260.0000000000007
+            },
+            "size": {
+              "width": 130,
+              "height": 110
+            },
+            "attrs": {
+              "text": {
+                "text": "Aplikasi\nPemindai"
+              },
+              "body": {
+                "stroke": "#333333",
+                "strokeWidth": 1.5,
+                "strokeDasharray": null
+              }
+            },
+            "visible": true,
+            "shape": "process",
+            "ports": {
+              "groups": {
+                "top": {
+                  "position": "top",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "right": {
+                  "position": "right",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "bottom": {
+                  "position": "bottom",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                },
+                "left": {
+                  "position": "left",
+                  "attrs": {
+                    "circle": {
+                      "r": 4,
+                      "magnet": true,
+                      "stroke": "#5F95FF",
+                      "strokeWidth": 1,
+                      "fill": "#fff",
+                      "style": {
+                        "visibility": "hidden"
+                      }
+                    }
+                  }
+                }
+              },
+              "items": [
+                {
+                  "group": "top",
+                  "id": "eb92cbf6-c083-4663-bc3c-4f5b1a02ce15"
+                },
+                {
+                  "group": "right",
+                  "id": "ac830cf9-e8c9-4d84-8141-20e807418910"
+                },
+                {
+                  "group": "bottom",
+                  "id": "a9d0a8ea-078a-47ca-8eed-3e33f8266edd"
+                },
+                {
+                  "group": "left",
+                  "id": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
+                }
+              ]
+            },
+            "id": "94d4e478-c52b-420b-ab90-4081afaf0140",
+            "data": {
+              "type": "tm.Process",
+              "name": "Aplikasi\nPemindai",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "handlesCardPayment": false,
+              "handlesGoodsOrServices": false,
+              "isWebApplication": false,
+              "privilegeLevel": "",
+              "threats": []
+            },
+            "zIndex": 11
           }
         ],
         "description": "Diagram aliran data Sistem E-Ticket dan Validasi Tiket Acara yang menggambarkan interaksi peserta, petugas pintu masuk, dan admin acara dengan Portal Web, Aplikasi Pemindai, Backend Tiket, serta Database Tiket. Diagram digunakan untuk mengidentifikasi ancaman keamanan berdasarkan metode STRIDE."
