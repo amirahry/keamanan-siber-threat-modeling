@@ -45,8 +45,8 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
-            "id": "559458ea-5dd8-48e2-b923-278bb15a5961",
             "zIndex": -1,
+            "id": "559458ea-5dd8-48e2-b923-278bb15a5961",
             "data": {
               "type": "tm.BoundaryBox",
               "name": "TB 1 - Area Publik",
@@ -80,6 +80,7 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
+            "zIndex": -1,
             "id": "9d2ad3a3-d02d-4214-a561-5826771f911d",
             "data": {
               "type": "tm.BoundaryBox",
@@ -95,8 +96,7 @@
                 "ea8ec5df-3c70-4236-81d9-4f455a9479a3",
                 "94d4e478-c52b-420b-ab90-4081afaf0140"
               ]
-            },
-            "zIndex": -1
+            }
           },
           {
             "position": {
@@ -114,6 +114,7 @@
             },
             "visible": true,
             "shape": "trust-boundary-box",
+            "zIndex": -1,
             "id": "7ba8ab0f-abc4-465a-b709-06124ea9edfe",
             "data": {
               "type": "tm.BoundaryBox",
@@ -131,8 +132,7 @@
                 "af0ca9ec-5dfd-4c2b-906a-1948505114de",
                 "47e2afa9-a8d9-40e6-9993-a1b4e1283604"
               ]
-            },
-            "zIndex": -1
+            }
           },
           {
             "position": {
@@ -368,7 +368,15 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -730,7 +738,15 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
             }
           },
           {
@@ -848,6 +864,13 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -898,7 +921,7 @@
             "vertices": [
               {
                 "x": 210,
-                "y": 420
+                "y": 430
               },
               {
                 "x": 210,
@@ -1497,7 +1520,7 @@
                 "y": 340
               },
               {
-                "x": 880,
+                "x": 900,
                 "y": 340
               }
             ]
@@ -1523,6 +1546,7 @@
             },
             "visible": true,
             "shape": "process",
+            "zIndex": 11,
             "ports": {
               "groups": {
                 "top": {
@@ -1618,9 +1642,16 @@
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
-            },
-            "zIndex": 11
+              "threats": [],
+              "threatFrequency": {
+                "spoofing": 2,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            }
           }
         ],
         "description": "Diagram aliran data Sistem E-Ticket dan Validasi Tiket Acara yang menggambarkan interaksi peserta, petugas pintu masuk, dan admin acara dengan Portal Web, Aplikasi Pemindai, Backend Tiket, serta Database Tiket. Diagram digunakan untuk mengidentifikasi ancaman keamanan berdasarkan metode STRIDE."
@@ -1628,6 +1659,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "",
-    "threatTop": 1
+    "threatTop": 10
   }
 }
