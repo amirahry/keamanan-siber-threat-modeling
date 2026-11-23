@@ -94,7 +94,7 @@
           {
             "position": {
               "x": 108.75,
-              "y": 140
+              "y": 90.00000000000023
             },
             "size": {
               "width": 90,
@@ -328,7 +328,7 @@
           {
             "position": {
               "x": 380,
-              "y": 160
+              "y": 110
             },
             "size": {
               "width": 120,
@@ -998,7 +998,7 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Data Flow",
+              "name": "Data \nKehadiran",
               "description": "",
               "outOfScope": false,
               "isTrustBoundary": false,
@@ -1012,9 +1012,9 @@
               "trustBoundaryIds": []
             },
             "labels": [
-              "Data Flow"
+              "Data \nKehadiran"
             ],
-            "id": "a015d6fb-927f-4f3d-90ac-e8da67c8c036",
+            "id": "01d74adb-55ab-4e5e-9b83-a77dfb8a320a",
             "source": {
               "cell": "5804f8bf-9564-4407-b4f8-e21c994fa02a",
               "port": "0940d704-5743-4281-aa34-dd0243eb5c54"
@@ -1022,6 +1022,139 @@
             "target": {
               "cell": "6343d913-1b93-4143-b18f-c3b72fb7919c",
               "port": "2d9f1327-0935-4647-9b5c-6daab03df178"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 275
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Registrasi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": []
+            },
+            "labels": [
+              "Registrasi"
+            ],
+            "id": "92c26046-23a3-4110-9f6f-3b58caf3baf3",
+            "source": {
+              "x": 199,
+              "y": 110
+            },
+            "target": {
+              "cell": "5804f8bf-9564-4407-b4f8-e21c994fa02a",
+              "port": "0940d704-5743-4281-aa34-dd0243eb5c54"
+            },
+            "vertices": [
+              {
+                "x": 300,
+                "y": 110
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead",
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           }
         ],
