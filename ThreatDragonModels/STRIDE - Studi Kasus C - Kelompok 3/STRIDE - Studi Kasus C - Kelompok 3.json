@@ -20,8 +20,19 @@
         "name": "Jevico Rovyaldo Febriliansyah"
       }
     ],
-    "diagrams": [],
-    "diagramTop": 0,
+    "diagrams": [
+      {
+        "id": 0,
+        "title": "Diagram STRIDE baru",
+        "diagramType": "STRIDE",
+        "placeholder": "Deskripsi diagram STRIDE baru",
+        "thumbnail": "./public/content/images/thumbnail.stride.jpg",
+        "version": "2.6.2",
+        "cells": [],
+        "description": "Diagram aliran data Sistem E-Ticket dan Validasi Tiket Acara yang menggambarkan interaksi peserta, petugas pintu masuk, dan admin acara dengan Portal Web, Aplikasi Pemindai, Backend Tiket, serta Database Tiket. Diagram digunakan untuk mengidentifikasi ancaman keamanan berdasarkan metode STRIDE."
+      }
+    ],
+    "diagramTop": 1,
     "reviewer": "",
     "threatTop": 0
   }
