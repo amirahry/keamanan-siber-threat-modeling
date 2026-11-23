@@ -123,9 +123,9 @@
               "isTrustBoundary": true,
               "hasOpenThreats": false,
               "crossingFlows": [
-                "bcba797d-835f-471e-8329-2ac6d2bc142f",
                 "b2fa7ea5-945e-4eb7-9e6b-5f3cc397b517",
                 "49314f37-5fa2-401d-b612-9bb255e28bff",
+                "bcba797d-835f-471e-8329-2ac6d2bc142f",
                 "b75a7616-7581-4e90-81e2-258032678d90"
               ],
               "containedElements": [
@@ -864,13 +864,6 @@
               "hasOpenThreats": false,
               "providesAuthentication": false,
               "threats": []
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1209,61 +1202,6 @@
             "connector": "smooth",
             "data": {
               "type": "tm.Flow",
-              "name": "Tiket dan\n Rekap\n",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "559458ea-5dd8-48e2-b923-278bb15a5961",
-                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
-              ]
-            },
-            "labels": [
-              "Tiket dan\n Rekap\n"
-            ],
-            "id": "bcba797d-835f-471e-8329-2ac6d2bc142f",
-            "source": {
-              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
-              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
-            },
-            "target": {
-              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
-              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
-            },
-            "vertices": [
-              {
-                "x": 310,
-                "y": 340
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
               "name": "Permintaan\nValidasi",
               "description": "",
               "outOfScope": false,
@@ -1294,7 +1232,11 @@
             },
             "vertices": [
               {
-                "x": 590,
+                "x": 630,
+                "y": 290
+              },
+              {
+                "x": 560,
                 "y": 290
               }
             ]
@@ -1349,67 +1291,12 @@
             },
             "vertices": [
               {
-                "x": 580,
+                "x": 560,
                 "y": 340
               },
               {
-                "x": 600,
+                "x": 630,
                 "y": 340
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Permintaan\nRegistrasi",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": [
-                "559458ea-5dd8-48e2-b923-278bb15a5961",
-                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
-              ]
-            },
-            "labels": [
-              "Permintaan\nRegistrasi"
-            ],
-            "id": "b75a7616-7581-4e90-81e2-258032678d90",
-            "source": {
-              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
-              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
-            },
-            "target": {
-              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
-              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
-            },
-            "vertices": [
-              {
-                "x": 310,
-                "y": 290
               }
             ]
           },
@@ -1522,6 +1409,124 @@
               {
                 "x": 900,
                 "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Tiket dan\n Rekap\n",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "559458ea-5dd8-48e2-b923-278bb15a5961",
+                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
+              ]
+            },
+            "labels": [
+              "Tiket dan\n Rekap\n"
+            ],
+            "id": "bcba797d-835f-471e-8329-2ac6d2bc142f",
+            "source": {
+              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
+              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
+            },
+            "target": {
+              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "vertices": [
+              {
+                "x": 350,
+                "y": 340
+              },
+              {
+                "x": 260,
+                "y": 340
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Permintaan\nRegistrasi",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [],
+              "trustBoundaryIds": [
+                "559458ea-5dd8-48e2-b923-278bb15a5961",
+                "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
+              ]
+            },
+            "labels": [
+              "Permintaan\nRegistrasi"
+            ],
+            "id": "b75a7616-7581-4e90-81e2-258032678d90",
+            "source": {
+              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
+              "port": "ac830cf9-e8c9-4d84-8141-20e807418910"
+            },
+            "target": {
+              "cell": "af0ca9ec-5dfd-4c2b-906a-1948505114de",
+              "port": "1e7e0723-8510-4f14-a3fb-dff0a1cc5e12"
+            },
+            "vertices": [
+              {
+                "x": 270,
+                "y": 290
+              },
+              {
+                "x": 330,
+                "y": 290
               }
             ]
           },
