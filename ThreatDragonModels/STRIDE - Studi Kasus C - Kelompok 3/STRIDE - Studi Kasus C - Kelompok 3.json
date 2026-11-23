@@ -1,0 +1,28 @@
+{
+  "version": "2.6.2",
+  "release_version": "",
+  "released_at": "2026-11-23",
+  "summary": {
+    "title": "STRIDE - Studi Kasus C - Kelompok 3",
+    "owner": "Kelompok 3 - Keamanan Siber",
+    "description": "Sistem E-Ticket dan Validasi Tiket Acara merupakan sistem tiket digital yang digunakan untuk registrasi peserta seminar, penerbitan tiket dengan QR Code unik, pemindaian dan validasi tiket oleh petugas pintu masuk, serta pemantauan kehadiran oleh admin acara. Sistem terdiri dari Portal Web, Aplikasi Pemindai, Backend Tiket, dan Database Tiket. Setiap tiket hanya berlaku untuk satu acara dan satu kali check-in. Validasi tiket dilakukan melalui backend yang terhubung dengan database, termasuk ketika beberapa petugas melakukan pemindaian secara bersamaan.",
+    "id": 0
+  },
+  "detail": {
+    "contributors": [
+      {
+        "name": "Amirah Essary Yunsarah Sujuthi"
+      },
+      {
+        "name": "Muhammad Rohman Azizi"
+      },
+      {
+        "name": "Jevico Rovyaldo Febriliansyah"
+      }
+    ],
+    "diagrams": [],
+    "diagramTop": 0,
+    "reviewer": "",
+    "threatTop": 0
+  }
+}
