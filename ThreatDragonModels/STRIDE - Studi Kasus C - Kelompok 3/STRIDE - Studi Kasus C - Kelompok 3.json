@@ -32,7 +32,7 @@
         "description": "Diagram aliran data Sistem E-Ticket dan Validasi Tiket Acara yang menggambarkan interaksi peserta, petugas pintu masuk, dan admin acara dengan Portal Web, Aplikasi Pemindai, Backend Tiket, serta Database Tiket. Diagram digunakan untuk mengidentifikasi ancaman keamanan berdasarkan metode STRIDE."
       }
     ],
-    "diagramTop": 3,
+    "diagramTop": 4,
     "reviewer": "",
     "threatTop": 0
   }
