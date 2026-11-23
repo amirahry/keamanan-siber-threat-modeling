@@ -265,8 +265,8 @@
                 "text": "Backend \nTiket"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -363,19 +363,98 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "2542868a-94b1-4689-95d8-0a24566d1dd9",
+                  "title": "Manipulasi Identitas Tiket",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Jika ID tiket dimanipulasi dan tidak divalidasi dengan benar oleh backend, tiket tidak sah berpotensi diterima. Dampak: keabsahan tiket terganggu. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Validasi ID tiket, kecocokan acara, dan status tiket melalui backend sebelum proses check-in.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 13,
+                  "score": "6"
+                },
+                {
+                  "id": "ca81e6b1-c34b-4e0b-b44b-07e5a57f7b70",
+                  "title": "Penyangkalan Aktivitas Check-in",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Repudiation",
+                  "description": "Jika audit log tidak memadai, petugas dapat menyangkal aktivitas validasi tiket. Dampak: aktivitas check-in sulit ditelusuri. Kemungkinan 2 × Dampak 2 = 4 (Sedang).",
+                  "mitigation": "Catat ID petugas, ID tiket, waktu validasi, dan hasil pemeriksaan dalam audit log yang terlindungi.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 14,
+                  "score": "4"
+                },
+                {
+                  "id": "17d7c29e-d955-4998-abd4-a36118a90a1e",
+                  "title": "Gangguan Layanan Validasi",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Denial of service",
+                  "description": "Jika backend menerima permintaan berlebihan tanpa pembatasan, layanan validasi tiket dapat terganggu. Dampak: proses check-in terhambat dan antrean peserta meningkat. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Terapkan rate limiting, pembatasan koneksi, pemantauan beban server, dan pengaturan kapasitas layanan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 16,
+                  "score": "6"
+                },
+                {
+                  "id": "2630cf8a-11b3-4892-aed1-c8aa3c53eedd",
+                  "title": "Akses Dashboard Tanpa Otorisasi",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Elevation of privilege",
+                  "description": "Jika backend tidak memverifikasi hak akses pengguna, petugas atau pengguna biasa dapat mengakses dashboard admin tanpa izin. Dampak: informasi administratif dan data kehadiran dapat diakses oleh pihak tidak berwenang. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Terapkan Role-Based Access Control (RBAC), verifikasi hak akses admin pada setiap permintaan, dan prinsip least privilege.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 17,
+                  "score": "6"
+                },
+                {
+                  "id": "ddf19f75-0448-4f05-8975-d5cf55219769",
+                  "title": "Check-in Ganda",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Jika tiket yang sama dipindai secara bersamaan di beberapa pintu tanpa pengendalian konkurensi, kedua permintaan berpotensi diterima. Dampak: satu tiket dapat digunakan lebih dari sekali dan data kehadiran menjadi tidak akurat. Kemungkinan 3 × Dampak 3 = 9 (Tinggi).",
+                  "mitigation": "Terapkan transaksi database atomik dan pemeriksaan status tiket agar hanya satu permintaan check-in yang berhasil.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 18,
+                  "score": "9"
+                },
+                {
+                  "id": "b8314d90-baca-4040-898f-d4e529c089bc",
+                  "title": "Perubahan Status Tiket Tanpa Otorisasi",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "Jika backend tidak membatasi perubahan status tiket, pihak tidak berwenang dapat mengubah status check-in tanpa melalui validasi resmi. Dampak: integritas data kehadiran terganggu. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Terapkan pemeriksaan otorisasi, validasi perubahan status tiket pada backend, dan pembatasan hak akses database.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 20,
+                  "score": "6"
+                }
+              ],
               "threatFrequency": {
                 "spoofing": 0,
-                "tampering": 0,
-                "repudiation": 0,
+                "tampering": 3,
+                "repudiation": 1,
                 "informationDisclosure": 0,
-                "denialOfService": 0,
-                "elevationOfPrivilege": 0
+                "denialOfService": 1,
+                "elevationOfPrivilege": 1
               }
             }
           },
@@ -393,11 +472,13 @@
                 "text": "Database Tiket"
               },
               "topLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               },
               "bottomLine": {
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -494,13 +575,40 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isALog": false,
               "isEncrypted": false,
               "isSigned": false,
               "storesCredentials": false,
               "storesInventory": false,
-              "threats": []
+              "threats": [
+                {
+                  "id": "c9134e83-53da-4569-a362-de62afe54731",
+                  "title": "Penghapusan Data Kehadiran",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Tampering",
+                  "description": "ika hak akses database terlalu luas, akun yang disalahgunakan dapat menghapus catatan kehadiran peserta. Dampak: kehilangan data check-in dan terganggunya integritas rekap kehadiran. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Terapkan pembatasan hak akses database, pencatatan audit log, pencadangan berkala, dan pengujian pemulihan data.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 23,
+                  "score": "6"
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -635,8 +743,8 @@
                 "text": "Portal Web"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -733,17 +841,31 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "be6b2dc4-fd3a-4b28-8964-9194998a4ecc",
+                  "title": "Kebocoran Data Peserta",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Jika kontrol akses tidak memadai, pihak tidak berwenang dapat mengakses data peserta melalui Portal Web. Dampak: kerahasiaan informasi peserta terancam. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Terapkan Role-Based Access Control (RBAC), verifikasi otorisasi pada backend, dan batasi akses data peserta sesuai hak pengguna.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 15,
+                  "score": "6"
+                }
+              ],
               "threatFrequency": {
                 "spoofing": 0,
                 "tampering": 0,
                 "repudiation": 0,
-                "informationDisclosure": 0,
+                "informationDisclosure": 2,
                 "denialOfService": 0,
                 "elevationOfPrivilege": 0
               }
@@ -919,58 +1041,6 @@
               {
                 "x": 210,
                 "y": 400
-              }
-            ]
-          },
-          {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "Registrasi",
-              "description": "\tPeserta mengirim data pendaftaran.",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": [],
-              "trustBoundaryIds": []
-            },
-            "labels": [
-              "Registrasi"
-            ],
-            "id": "02171aee-3309-4f53-950d-5ec38b8d0034",
-            "source": {
-              "cell": "6698cc28-bc80-4ef5-aa06-53d1b54ff989",
-              "port": "e02dc955-683b-4c66-85e1-77880c38910e"
-            },
-            "target": {
-              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
-              "port": "eb92cbf6-c083-4663-bc3c-4f5b1a02ce15"
-            },
-            "vertices": [
-              {
-                "x": 200,
-                "y": 210
               }
             ]
           },
@@ -1186,7 +1256,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -1207,16 +1278,35 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "fd9cecee-a118-4da3-a876-ec0c2c802d56",
+                  "title": "Penyadapan Data Validasi",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Information disclosure",
+                  "description": "Jika komunikasi tidak terlindungi, pihak tidak berwenang dapat menyadap ID tiket dan sesi petugas saat dikirim ke backend. Dampak: kebocoran informasi validasi dan autentikasi. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Gunakan HTTPS/TLS, validasi sertifikat server, dan lindungi token sesi petugas.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 21,
+                  "score": "6"
+                }
+              ],
               "trustBoundaryIds": [
                 "9d2ad3a3-d02d-4214-a561-5826771f911d",
                 "7ba8ab0f-abc4-465a-b709-06124ea9edfe"
-              ]
+              ],
+              "threatFrequency": {
+                "tampering": 0,
+                "informationDisclosure": 1,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Permintaan\nValidasi"
@@ -1531,6 +1621,82 @@
             ]
           },
           {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "red",
+                "strokeWidth": 2.5,
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "Registrasi",
+              "description": "\tPeserta mengirim data pendaftaran.",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": true,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": [
+                {
+                  "id": "c05c3904-eff0-4629-bdd7-4830390caa4e",
+                  "title": "Manipulasi Data Registrasi",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Jika data registrasi tidak divalidasi dengan benar, penyerang dapat mengirimkan informasi pendaftaran yang dimanipulasi. Dampak: integritas data peserta terganggu. Kemungkinan 2 × Dampak 2 = 4 (Sedang).",
+                  "mitigation": "Jika data registrasi tidak divalidasi dengan benar, penyerang dapat mengirimkan informasi pendaftaran yang dimanipulasi. Dampak: integritas data peserta terganggu. Kemungkinan 2 × Dampak 2 = 4 (Sedang).",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 22,
+                  "score": "4"
+                }
+              ],
+              "trustBoundaryIds": [],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
+            },
+            "labels": [
+              "Registrasi"
+            ],
+            "id": "02171aee-3309-4f53-950d-5ec38b8d0034",
+            "source": {
+              "cell": "6698cc28-bc80-4ef5-aa06-53d1b54ff989",
+              "port": "e02dc955-683b-4c66-85e1-77880c38910e"
+            },
+            "target": {
+              "cell": "e9417515-8949-49dd-a87f-28719888b7a3",
+              "port": "eb92cbf6-c083-4663-bc3c-4f5b1a02ce15"
+            },
+            "vertices": [
+              {
+                "x": 200,
+                "y": 200
+              },
+              {
+                "x": 200,
+                "y": 230
+              }
+            ]
+          },
+          {
             "position": {
               "x": 666.5000000000001,
               "y": 260.0000000000007
@@ -1544,8 +1710,8 @@
                 "text": "Aplikasi\nPemindai"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -1642,14 +1808,41 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": [],
+              "threats": [
+                {
+                  "id": "ee98fab5-c473-4307-8a8b-f89e55007019",
+                  "title": "Penyalahgunaan Sesi Petugas",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Jika sesi petugas disalahgunakan, pihak tidak berwenang dapat melakukan validasi tiket. Dampak: validasi tanpa izin. Kemungkinan 2 × Dampak 3 = 6 (Tinggi).",
+                  "mitigation": "Verifikasi sesi dan hak akses petugas pada setiap permintaan serta terapkan masa kedaluwarsa sesi.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 12,
+                  "score": "6"
+                },
+                {
+                  "id": "b890c6d7-a604-463c-89ba-5b2bb5ccd57f",
+                  "title": "Penggunaan Salinan QR Code",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Jika pihak tidak berwenang memperoleh salinan QR Code peserta, tiket tersebut dapat digunakan sebelum pemilik aslinya. Dampak: pemilik tiket asli berpotensi ditolak saat check-in. Kemungkinan 3 × Dampak 2 = 6 (Tinggi).",
+                  "mitigation": "Terapkan validasi tiket sekali pakai secara atomik, pemeriksaan status check-in, dan verifikasi identitas peserta jika diperlukan.",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 19,
+                  "score": "6"
+                }
+              ],
               "threatFrequency": {
-                "spoofing": 2,
+                "spoofing": 4,
                 "tampering": 0,
                 "repudiation": 0,
                 "informationDisclosure": 0,
@@ -1664,6 +1857,6 @@
     ],
     "diagramTop": 5,
     "reviewer": "",
-    "threatTop": 10
+    "threatTop": 23
   }
 }
